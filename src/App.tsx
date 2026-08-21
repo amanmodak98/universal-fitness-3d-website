@@ -1,22 +1,14 @@
-import { Suspense, useEffect } from 'react'
+import { Suspense, useEffect, useState } from 'react'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import Navbar from './components/Navbar'
-import HeroSection from './components/HeroSection'
-import AboutSection from './components/AboutSection'
-import GymExperience3D from './components/GymExperience3D'
-import FacilitiesSection from './components/FacilitiesSection'
-import TurfBookingSection from './components/TurfBookingSection'
-import FitnessJourneySection from './components/FitnessJourneySection'
-import WhyUniversalSection from './components/WhyUniversalSection'
-import ReviewsSection from './components/ReviewsSection'
-import LocationSection from './components/LocationSection'
-import ContactCTASection from './components/ContactCTASection'
-import Footer from './components/Footer'
+import AppLayout from './components/layout/AppLayout'
+import HomePage from './pages/HomePage'
+import AboutPage from './pages/AboutPage'
+import ProgramsPage from './pages/ProgramsPage'
+import ContactPage from './pages/ContactPage'
 import BookingModal from './components/BookingModal'
-import FloatingButtons from './components/FloatingButtons'
 import Preloader from './components/Preloader'
-import { useState } from 'react'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -35,26 +27,27 @@ function App() {
     }
   }, [isLoading])
 
+  const router = createBrowserRouter([
+    {
+      path: '/',
+      element: <AppLayout onBookTurf={() => setIsBookingOpen(true)} />,
+      children: [
+        { index: true, element: <HomePage /> },
+        { path: 'about', element: <AboutPage /> },
+        { path: 'programs', element: <ProgramsPage /> },
+        { path: 'contact', element: <ContactPage /> },
+      ],
+    },
+  ])
+
   return (
-    <div className="bg-[#0a0a0a] min-h-screen text-white overflow-x-hidden">
+    <>
       {isLoading && <Preloader />}
       <Suspense fallback={null}>
-        <Navbar onBookTurf={() => setIsBookingOpen(true)} />
-        <HeroSection onBookTurf={() => setIsBookingOpen(true)} />
-        <AboutSection />
-        <GymExperience3D />
-        <FacilitiesSection />
-        <TurfBookingSection onBook={() => setIsBookingOpen(true)} />
-        <FitnessJourneySection />
-        <WhyUniversalSection />
-        <ReviewsSection />
-        <LocationSection />
-        <ContactCTASection onBookTurf={() => setIsBookingOpen(true)} />
-        <Footer />
-        <FloatingButtons />
+        <RouterProvider router={router} />
         {isBookingOpen && <BookingModal onClose={() => setIsBookingOpen(false)} />}
       </Suspense>
-    </div>
+    </>
   )
 }
 
