@@ -1,11 +1,9 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import { useBooking } from '../context/BookingContext'
 
-interface NavbarProps {
-  onBookTurf: () => void
-}
-
-const Navbar = ({ onBookTurf }: NavbarProps) => {
+const Navbar = () => {
+  const { openBooking } = useBooking()
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
@@ -71,7 +69,7 @@ const Navbar = ({ onBookTurf }: NavbarProps) => {
           {/* CTA Button */}
           <div className="hidden lg:block">
             <motion.button
-              onClick={onBookTurf}
+              onClick={openBooking}
               className="px-6 py-3 bg-gradient-to-r from-[#FFD700] to-[#FFA500] text-black font-bold rounded-full hover:shadow-lg hover:shadow-[#FFD700]/30 transition-all duration-300"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -130,7 +128,7 @@ const Navbar = ({ onBookTurf }: NavbarProps) => {
               ))}
               <motion.button
                 onClick={() => {
-                  onBookTurf()
+                  openBooking()
                   setIsMobileMenuOpen(false)
                 }}
                 className="w-full mt-4 px-6 py-3 bg-gradient-to-r from-[#FFD700] to-[#FFA500] text-black font-bold rounded-full"

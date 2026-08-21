@@ -101,6 +101,7 @@ const Footer = () => {
           <p className="text-gray-500 text-sm">
             © {currentYear} Universal Fitness & Sport Arena Turf. All rights reserved.
           </p>
+          <p className="text-gray-500 text-sm">Designed &amp; Developed by <a href="https://www.infirexa.tech" target="_blank" rel="noopener noreferrer">Infirexa</a></p>
           <p className="text-gray-600 text-xs mt-2 md:mt-0">
             Demo website for client presentation.
           </p>

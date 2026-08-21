@@ -4,15 +4,11 @@ import Navbar from '../Navbar'
 import Footer from '../Footer'
 import FloatingButtons from '../FloatingButtons'
 
-interface AppLayoutProps {
-  onBookTurf: () => void
-}
-
-export default function AppLayout({ onBookTurf }: AppLayoutProps) {
+export default function AppLayout() {
   const location = useLocation()
   return (
     <div className="bg-[#0a0a0a] min-h-screen text-white overflow-x-hidden">
-      <Navbar onBookTurf={onBookTurf} />
+      <Navbar />
       <AnimatePresence mode="wait">
         <motion.div
           key={location.pathname}
@@ -21,7 +17,7 @@ export default function AppLayout({ onBookTurf }: AppLayoutProps) {
           exit={{ opacity: 0 }}
           transition={{ duration: 0.2 }}
         >
-          <Outlet context={{ onBookTurf }} />
+          <Outlet />
         </motion.div>
       </AnimatePresence>
       <Footer />

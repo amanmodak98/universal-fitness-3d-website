@@ -2,12 +2,10 @@ import { Canvas } from '@react-three/fiber'
 import { Suspense } from 'react'
 import { motion } from 'framer-motion'
 import HeroScene from './scenes/HeroScene'
+import { useBooking } from '../context/BookingContext'
 
-interface HeroSectionProps {
-  onBookTurf: () => void
-}
-
-const HeroSection = ({ onBookTurf }: HeroSectionProps) => {
+const HeroSection = () => {
+  const { openBooking } = useBooking()
   return (
     <section id="home" className="relative h-screen w-full overflow-hidden">
       {/* 3D Background */}
@@ -79,7 +77,7 @@ const HeroSection = ({ onBookTurf }: HeroSectionProps) => {
             JOIN THE GYM
           </motion.a>
           <motion.button
-            onClick={onBookTurf}
+            onClick={openBooking}
             className="px-8 py-4 border-2 border-[#FFD700] text-[#FFD700] font-bold rounded-full text-lg hover:bg-[#FFD700] hover:text-black transition-all duration-300"
             whileHover={{ scale: 1.05, y: -3 }}
             whileTap={{ scale: 0.95 }}

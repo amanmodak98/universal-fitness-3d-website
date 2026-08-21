@@ -1,7 +1,9 @@
 import FacilitiesSection from '../components/FacilitiesSection'
 import TurfBookingSection from '../components/TurfBookingSection'
+import { useBooking } from '../context/BookingContext'
 
 export default function ProgramsPage() {
+  const { openBooking } = useBooking()
   return (
     <main>
       <section className="pt-24 pb-12 bg-[#0a0a0a] text-center">
@@ -11,7 +13,7 @@ export default function ProgramsPage() {
         </p>
       </section>
       <FacilitiesSection />
-      <TurfBookingSection />
+      <TurfBookingSection onBook={openBooking} />
     </main>
   )
 }

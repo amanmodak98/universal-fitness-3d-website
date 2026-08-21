@@ -1,13 +1,11 @@
 import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
+import { useBooking } from '../context/BookingContext'
 
-interface ContactCTASectionProps {
-  onBookTurf: () => void
-}
-
-const ContactCTASection = ({ onBookTurf }: ContactCTASectionProps) => {
+const ContactCTASection = () => {
   const sectionRef = useRef<HTMLDivElement>(null)
   const isInView = useInView(sectionRef, { once: true, margin: '-100px' })
+  const { openBooking } = useBooking()
 
   return (
     <section ref={sectionRef} className="py-20 md:py-40 px-4 relative overflow-hidden">
@@ -69,7 +67,7 @@ const ContactCTASection = ({ onBookTurf }: ContactCTASectionProps) => {
               JOIN NOW
             </motion.a>
             <motion.button
-              onClick={onBookTurf}
+              onClick={openBooking}
               className="px-10 py-4 border-2 border-[#FFD700] text-[#FFD700] font-bold rounded-full text-lg hover:bg-[#FFD700] hover:text-black transition-all duration-300"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
