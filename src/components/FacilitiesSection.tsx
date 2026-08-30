@@ -7,7 +7,7 @@ const facilities = [
     title: 'GYM',
     desc: 'Train with premium equipment and a powerful atmosphere.',
     icon: '🏋️',
-    gradient: 'from-[#FFD700]/20 to-[#FFA500]/10',
+    gradient: 'from-[#ff3d2e]/20 to-[#e62414]/10',
   },
   {
     number: '02',
@@ -79,7 +79,7 @@ const FacilityCard = ({ facility, index }: { facility: typeof facilities[0]; ind
   return (
     <motion.div
       ref={cardRef}
-      className="group relative rounded-2xl overflow-hidden border border-white/10 bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-sm transition-all duration-300 hover:border-[#FFD700]/30 hover:shadow-xl hover:shadow-[#FFD700]/10"
+      className="group relative rounded-2xl overflow-hidden border border-white/10 bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-sm transition-all duration-300 hover:border-[#ff3d2e]/30 hover:shadow-xl hover:shadow-[#ff3d2e]/10"
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
       initial={{ opacity: 0, y: 50 }}
@@ -94,7 +94,7 @@ const FacilityCard = ({ facility, index }: { facility: typeof facilities[0]; ind
       {/* Content */}
       <div className="relative p-6 md:p-8 h-full">
         {/* Number */}
-        <span className="text-5xl md:text-6xl font-black text-white/5 absolute top-4 right-6 group-hover:text-[#FFD700]/10 transition-colors duration-500" style={{ fontFamily: 'Oswald, sans-serif' }}>
+        <span className="text-5xl md:text-6xl font-black text-white/5 absolute top-4 right-6 group-hover:text-[#ff3d2e]/10 transition-colors duration-500 font-display" >
           {facility.number}
         </span>
         
@@ -107,7 +107,7 @@ const FacilityCard = ({ facility, index }: { facility: typeof facilities[0]; ind
         </motion.div>
         
         {/* Title */}
-        <h3 className="text-xl md:text-2xl font-bold text-white group-hover:text-[#FFD700] transition-colors duration-300" style={{ fontFamily: 'Oswald, sans-serif' }}>
+        <h3 className="text-xl md:text-2xl font-bold text-white group-hover:text-[#ff3d2e] transition-colors duration-300 font-display" >
           {facility.title}
         </h3>
         
@@ -117,7 +117,7 @@ const FacilityCard = ({ facility, index }: { facility: typeof facilities[0]; ind
         </p>
         
         {/* Bottom accent */}
-        <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-[#FFD700] to-[#FFA500] group-hover:w-full transition-all duration-500" />
+        <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-[#ff3d2e] to-[#e62414] group-hover:w-full transition-all duration-500" />
       </div>
     </motion.div>
   )
@@ -130,7 +130,7 @@ const FacilitiesSection = () => {
   return (
     <section id="facilities" ref={sectionRef} className="py-20 md:py-32 px-4 relative">
       {/* Background decoration */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#FFD700]/5 rounded-full blur-3xl" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#ff3d2e]/5 rounded-full blur-3xl" />
       
       <div className="max-w-7xl mx-auto relative z-10">
         <motion.div
@@ -139,8 +139,8 @@ const FacilitiesSection = () => {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 1 }}
         >
-          <p className="text-[#FFD700] tracking-[0.3em] text-sm mb-4">WHAT WE OFFER</p>
-          <h2 className="text-4xl md:text-6xl lg:text-7xl font-black" style={{ fontFamily: 'Oswald, sans-serif' }}>
+          <p className="text-[#ff3d2e] tracking-[0.3em] text-sm mb-4">WHAT WE OFFER</p>
+          <h2 className="text-4xl md:text-6xl lg:text-7xl font-black font-display" >
             WORLD-CLASS <span className="gradient-text">FACILITIES</span>
           </h2>
           <p className="text-gray-400 mt-4 max-w-xl mx-auto">

@@ -19,12 +19,12 @@ const Footer = () => {
           {/* Brand */}
           <div>
             <div className="flex items-center space-x-3 mb-4">
-              <div className="w-10 h-10 bg-gradient-to-br from-[#FFD700] to-[#FFA500] rounded-lg flex items-center justify-center">
-                <span className="text-black font-bold text-lg" style={{ fontFamily: 'Oswald, sans-serif' }}>UF</span>
+              <div className="w-10 h-10 bg-gradient-to-br from-[#ff3d2e] to-[#e62414] rounded-lg flex items-center justify-center">
+                <span className="text-black font-bold text-lg font-display" >UF</span>
               </div>
               <div>
-                <h3 className="text-white font-bold" style={{ fontFamily: 'Oswald, sans-serif' }}>UNIVERSAL FITNESS</h3>
-                <p className="text-[#FFD700] text-xs tracking-wider">& SPORT ARENA TURF</p>
+                <h3 className="text-white font-bold font-display" >UNIVERSAL FITNESS</h3>
+                <p className="text-[#ff3d2e] text-xs tracking-wider">& SPORT ARENA TURF</p>
               </div>
             </div>
             <p className="text-gray-500 text-sm">
@@ -37,11 +37,11 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-white font-bold mb-4" style={{ fontFamily: 'Oswald, sans-serif' }}>QUICK LINKS</h4>
+            <h4 className="text-white font-bold mb-4 font-display" >QUICK LINKS</h4>
             <ul className="space-y-2">
               {quickLinks.map((link) => (
                 <li key={link.name}>
-                  <a href={link.href} className="text-gray-400 hover:text-[#FFD700] transition-colors text-sm">
+                  <a href={link.href} className="text-gray-400 hover:text-[#ff3d2e] transition-colors text-sm">
                     {link.name}
                   </a>
                 </li>
@@ -51,16 +51,16 @@ const Footer = () => {
 
           {/* Contact */}
           <div>
-            <h4 className="text-white font-bold mb-4" style={{ fontFamily: 'Oswald, sans-serif' }}>CONTACT</h4>
+            <h4 className="text-white font-bold mb-4 font-display" >CONTACT</h4>
             <ul className="space-y-3">
               <li>
-                <a href="tel:+916269673000" className="text-gray-400 hover:text-[#FFD700] transition-colors text-sm flex items-center space-x-2">
+                <a href="tel:+916269673000" className="text-gray-400 hover:text-[#ff3d2e] transition-colors text-sm flex items-center space-x-2">
                   <span>📞</span>
                   <span>+91 62696 73000</span>
                 </a>
               </li>
               <li>
-                <a href="mailto:universalfitness321@gmail.com" className="text-gray-400 hover:text-[#FFD700] transition-colors text-sm flex items-center space-x-2">
+                <a href="mailto:universalfitness321@gmail.com" className="text-gray-400 hover:text-[#ff3d2e] transition-colors text-sm flex items-center space-x-2">
                   <span>✉️</span>
                   <span>universalfitness321@gmail.com</span>
                 </a>
@@ -76,16 +76,16 @@ const Footer = () => {
 
           {/* Hours & Social */}
           <div>
-            <h4 className="text-white font-bold mb-4" style={{ fontFamily: 'Oswald, sans-serif' }}>OPEN HOURS</h4>
-            <p className="text-[#FFD700] font-bold text-lg mb-2">24/7</p>
+            <h4 className="text-white font-bold mb-4 font-display" >OPEN HOURS</h4>
+            <p className="text-[#ff3d2e] font-bold text-lg mb-2">24/7</p>
             <p className="text-gray-400 text-sm mb-6">Always open. 7 days a week.</p>
             
-            <h4 className="text-white font-bold mb-3" style={{ fontFamily: 'Oswald, sans-serif' }}>FOLLOW US</h4>
+            <h4 className="text-white font-bold mb-3 font-display" >FOLLOW US</h4>
             <div className="flex space-x-3">
               {['Instagram', 'Facebook', 'YouTube'].map((social) => (
                 <div
                   key={social}
-                  className="w-10 h-10 glassmorphism rounded-full flex items-center justify-center hover:border-[#FFD700]/30 border border-white/10 cursor-pointer transition-all duration-300 hover:scale-110"
+                  className="w-10 h-10 glassmorphism rounded-full flex items-center justify-center hover:border-[#ff3d2e]/30 border border-white/10 cursor-pointer transition-all duration-300 hover:scale-110"
                   title={social}
                 >
                   <span className="text-xs text-gray-400">{social[0]}</span>

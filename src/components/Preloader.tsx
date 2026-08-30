@@ -13,9 +13,9 @@ const Preloader = () => {
           animate={{ rotate: 360 }}
           transition={{ duration: 2, repeat: Infinity, ease: 'linear' }}
         >
-          <div className="absolute inset-0 border-4 border-transparent border-t-[#FFD700] rounded-full"></div>
-          <div className="absolute inset-4 border-4 border-transparent border-b-[#FFA500] rounded-full" style={{ animation: 'spin 1.5s linear infinite reverse' }}></div>
-          <div className="absolute inset-8 border-4 border-transparent border-t-[#FFD700] rounded-full" style={{ animation: 'spin 1s linear infinite' }}></div>
+          <div className="absolute inset-0 border-4 border-transparent border-t-[#ff3d2e] rounded-full"></div>
+          <div className="absolute inset-4 border-4 border-transparent border-b-[#e62414] rounded-full" style={{ animation: 'spin 1.5s linear infinite reverse' }}></div>
+          <div className="absolute inset-8 border-4 border-transparent border-t-[#ff3d2e] rounded-full" style={{ animation: 'spin 1s linear infinite' }}></div>
         </motion.div>
         
         <motion.h1
@@ -23,7 +23,7 @@ const Preloader = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
-          style={{ fontFamily: 'Oswald, sans-serif' }}
+          
         >
           UNIVERSAL FITNESS
         </motion.h1>

@@ -26,7 +26,7 @@ const FloatingButtons = () => {
       {/* Call Button */}
       <motion.a
         href="tel:+916269673000"
-        className="fixed bottom-24 right-6 z-50 w-14 h-14 bg-gradient-to-r from-[#FFD700] to-[#FFA500] rounded-full flex items-center justify-center shadow-lg hover:shadow-xl hover:shadow-[#FFD700]/30 transition-all duration-300 group"
+        className="fixed bottom-24 right-6 z-50 w-14 h-14 bg-gradient-to-r from-[#ff3d2e] to-[#e62414] rounded-full flex items-center justify-center shadow-lg hover:shadow-xl hover:shadow-[#ff3d2e]/30 transition-all duration-300 group"
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
         initial={{ opacity: 0, scale: 0 }}

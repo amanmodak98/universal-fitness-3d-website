@@ -52,8 +52,8 @@ const AboutSection = () => {
   return (
     <section id="about" ref={sectionRef} className="py-20 md:py-32 px-4 relative overflow-hidden">
       {/* Background elements */}
-      <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-[#FFD700]/5 to-transparent" />
-      <div className="absolute top-1/4 left-0 w-32 h-32 bg-[#FFD700]/10 rounded-full blur-3xl" />
+      <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-[#ff3d2e]/5 to-transparent" />
+      <div className="absolute top-1/4 left-0 w-32 h-32 bg-[#ff3d2e]/10 rounded-full blur-3xl" />
 
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
@@ -71,12 +71,12 @@ const AboutSection = () => {
                   <div className="relative">
                     {/* Animated rings */}
                     <motion.div
-                      className="w-64 h-64 md:w-80 md:h-80 border-2 border-[#FFD700]/30 rounded-full"
+                      className="w-64 h-64 md:w-80 md:h-80 border-2 border-[#ff3d2e]/30 rounded-full"
                       animate={{ rotate: 360 }}
                       transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
                     />
                     <motion.div
-                      className="absolute inset-4 w-56 h-56 md:w-72 md:h-72 border border-[#FFA500]/20 rounded-full"
+                      className="absolute inset-4 w-56 h-56 md:w-72 md:h-72 border border-[#e62414]/20 rounded-full"
                       animate={{ rotate: -360 }}
                       transition={{ duration: 15, repeat: Infinity, ease: 'linear' }}
                     />
@@ -88,15 +88,15 @@ const AboutSection = () => {
                     {/* Center content */}
                     <div className="absolute inset-0 flex items-center justify-center">
                       <div className="text-center">
-                        <div className="text-6xl md:text-8xl font-black gradient-text" style={{ fontFamily: 'Oswald, sans-serif' }}>UF</div>
-                        <p className="text-[#FFD700] text-xs tracking-widest mt-2">EST. RAIPUR</p>
+                        <div className="text-6xl md:text-8xl font-black gradient-text font-display" >UF</div>
+                        <p className="text-[#ff3d2e] text-xs tracking-widest mt-2">EST. RAIPUR</p>
                       </div>
                     </div>
                   </div>
                 </div>
                 {/* Decorative lines */}
-                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#FFD700]/50 to-transparent" />
-                <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#FFA500]/50 to-transparent" />
+                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#ff3d2e]/50 to-transparent" />
+                <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#e62414]/50 to-transparent" />
               </div>
               
               {/* Floating badge */}
@@ -105,7 +105,7 @@ const AboutSection = () => {
                 animate={{ y: [-5, 5, -5] }}
                 transition={{ duration: 3, repeat: Infinity }}
               >
-                <p className="text-[#FFD700] font-bold text-lg">24/7</p>
+                <p className="text-[#ff3d2e] font-bold text-lg">24/7</p>
                 <p className="text-white/60 text-xs">ALWAYS OPEN</p>
               </motion.div>
             </div>
@@ -117,8 +117,8 @@ const AboutSection = () => {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 1, delay: 0.3 }}
           >
-            <p className="text-[#FFD700] tracking-[0.3em] text-sm mb-4">ABOUT US</p>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-black mb-6 leading-tight" style={{ fontFamily: 'Oswald, sans-serif' }}>
+            <p className="text-[#ff3d2e] tracking-[0.3em] text-sm mb-4">ABOUT US</p>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-black mb-6 leading-tight font-display" >
               MORE THAN<br />
               <span className="gradient-text">A GYM.</span>
             </h2>
@@ -135,7 +135,7 @@ const AboutSection = () => {
                   animate={isInView ? { opacity: 1, x: 0 } : {}}
                   transition={{ delay: 0.5 + index * 0.1 }}
                 >
-                  <div className="w-2 h-2 bg-[#FFD700] rounded-full flex-shrink-0" />
+                  <div className="w-2 h-2 bg-[#ff3d2e] rounded-full flex-shrink-0" />
                   <span className="text-gray-300">{feature}</span>
                 </motion.div>
               ))}
@@ -152,7 +152,7 @@ const AboutSection = () => {
                   transition={{ delay: 0.8 + index * 0.1 }}
                   whileHover={{ scale: 1.05, borderColor: 'rgba(255, 215, 0, 0.3)' }}
                 >
-                  <p className="text-2xl md:text-3xl font-black gradient-text" style={{ fontFamily: 'Oswald, sans-serif' }}>
+                  <p className="text-2xl md:text-3xl font-black gradient-text font-display" >
                     {stat.display === 'MULTI' ? 'MULTI' : (
                       <>
                         {stat.display === '4.9' ? '4.9' : stat.display === '24/7' ? '24/7' : stat.display === '67+' ? <><AnimatedCounter target={67} />+</> : <AnimatedCounter target={stat.value} />}

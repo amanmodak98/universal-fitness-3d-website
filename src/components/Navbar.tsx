@@ -41,14 +41,14 @@ const Navbar = () => {
             className="flex items-center space-x-2"
             whileHover={{ scale: 1.05 }}
           >
-            <div className="w-10 h-10 bg-gradient-to-br from-[#FFD700] to-[#FFA500] rounded-lg flex items-center justify-center">
-              <span className="text-black font-bold text-lg" style={{ fontFamily: 'Oswald, sans-serif' }}>UF</span>
+            <div className="w-10 h-10 bg-gradient-to-br from-[#ff3d2e] to-[#e62414] rounded-lg flex items-center justify-center">
+              <span className="text-black font-bold text-lg font-display" >UF</span>
             </div>
             <div className="hidden sm:block">
-              <h1 className="text-white font-bold text-lg leading-none" style={{ fontFamily: 'Oswald, sans-serif' }}>
+              <h1 className="text-white font-bold text-lg leading-none font-display" >
                 UNIVERSAL FITNESS
               </h1>
-              <p className="text-[#FFD700] text-xs tracking-wider">& SPORT ARENA</p>
+              <p className="text-[#ff3d2e] text-xs tracking-wider">& SPORT ARENA</p>
             </div>
           </motion.a>
 
@@ -58,7 +58,7 @@ const Navbar = () => {
               <motion.a
                 key={link.name}
                 href={link.href}
-                className="text-white/80 hover:text-[#FFD700] transition-colors duration-300 text-sm font-medium tracking-wide"
+                className="text-white/80 hover:text-[#ff3d2e] transition-colors duration-300 text-sm font-medium tracking-wide"
                 whileHover={{ y: -2 }}
               >
                 {link.name}
@@ -70,7 +70,7 @@ const Navbar = () => {
           <div className="hidden lg:block">
             <motion.button
               onClick={openBooking}
-              className="px-6 py-3 bg-gradient-to-r from-[#FFD700] to-[#FFA500] text-black font-bold rounded-full hover:shadow-lg hover:shadow-[#FFD700]/30 transition-all duration-300"
+              className="px-6 py-3 bg-gradient-to-r from-[#ff3d2e] to-[#e62414] text-black font-bold rounded-full hover:shadow-lg hover:shadow-[#ff3d2e]/30 transition-all duration-300"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -117,7 +117,7 @@ const Navbar = () => {
                 <motion.a
                   key={link.name}
                   href={link.href}
-                  className="block text-white/80 hover:text-[#FFD700] transition-colors duration-300 text-lg font-medium"
+                  className="block text-white/80 hover:text-[#ff3d2e] transition-colors duration-300 text-lg font-medium"
                   initial={{ x: -20, opacity: 0 }}
                   animate={{ x: 0, opacity: 1 }}
                   transition={{ delay: index * 0.1 }}
@@ -131,7 +131,7 @@ const Navbar = () => {
                   openBooking()
                   setIsMobileMenuOpen(false)
                 }}
-                className="w-full mt-4 px-6 py-3 bg-gradient-to-r from-[#FFD700] to-[#FFA500] text-black font-bold rounded-full"
+                className="w-full mt-4 px-6 py-3 bg-gradient-to-r from-[#ff3d2e] to-[#e62414] text-black font-bold rounded-full"
                 initial={{ y: 20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.6 }}

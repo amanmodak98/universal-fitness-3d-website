@@ -22,8 +22,8 @@ const GymEquipment = () => {
   return (
     <group ref={groupRef}>
       <ambientLight intensity={0.4} />
-      <pointLight position={[5, 5, 5]} intensity={0.8} color="#FFD700" />
-      <pointLight position={[-5, 3, -5]} intensity={0.5} color="#FFA500" />
+      <pointLight position={[5, 5, 5]} intensity={0.8} color="#ff3d2e" />
+      <pointLight position={[-5, 3, -5]} intensity={0.5} color="#e62414" />
       <spotLight position={[0, 8, 0]} intensity={1} angle={0.4} penumbra={1} color="#fff" />
       
       {/* Floor */}
@@ -56,11 +56,11 @@ const GymEquipment = () => {
         </mesh>
         <mesh position={[-0.5, 1.2, -0.4]} rotation={[Math.PI / 2, 0, 0]}>
           <cylinderGeometry args={[0.15, 0.15, 0.08, 16]} />
-          <meshStandardMaterial color="#FFD700" metalness={0.8} roughness={0.2} />
+          <meshStandardMaterial color="#ff3d2e" metalness={0.8} roughness={0.2} />
         </mesh>
         <mesh position={[0.5, 1.2, -0.4]} rotation={[Math.PI / 2, 0, 0]}>
           <cylinderGeometry args={[0.15, 0.15, 0.08, 16]} />
-          <meshStandardMaterial color="#FFD700" metalness={0.8} roughness={0.2} />
+          <meshStandardMaterial color="#ff3d2e" metalness={0.8} roughness={0.2} />
         </mesh>
       </group>
       
@@ -144,7 +144,7 @@ const Points = () => {
           args={[positions, 3]}
         />
       </bufferGeometry>
-      <pointsMaterial size={0.02} color="#FFD700" transparent opacity={0.4} sizeAttenuation />
+      <pointsMaterial size={0.02} color="#ff3d2e" transparent opacity={0.4} sizeAttenuation />
     </points>
   )
 }
@@ -184,8 +184,8 @@ const GymExperience3D = () => {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 1 }}
         >
-          <p className="text-[#FFD700] tracking-[0.3em] text-sm mb-4">EXPERIENCE</p>
-          <h2 className="text-4xl md:text-6xl lg:text-7xl font-black" style={{ fontFamily: 'Oswald, sans-serif' }}>
+          <p className="text-[#ff3d2e] tracking-[0.3em] text-sm mb-4">EXPERIENCE</p>
+          <h2 className="text-4xl md:text-6xl lg:text-7xl font-black font-display" >
             ENTER THE <span className="gradient-text">FITNESS ZONE</span>
           </h2>
         </motion.div>
@@ -228,7 +228,7 @@ const GymExperience3D = () => {
               >
                 <span className="text-3xl">{item.icon}</span>
                 <div>
-                  <h3 className="text-xl font-bold text-[#FFD700]" style={{ fontFamily: 'Oswald, sans-serif' }}>
+                  <h3 className="text-xl font-bold text-[#ff3d2e] font-display" >
                     {item.title}
                   </h3>
                   <p className="text-gray-400 text-sm mt-1">{item.desc}</p>

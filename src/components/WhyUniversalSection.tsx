@@ -18,7 +18,7 @@ const WhyUniversalSection = () => {
     <section ref={sectionRef} className="py-20 md:py-32 relative overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a] via-[#0d0d0d] to-[#0a0a0a]" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-[#FFD700]/3 rounded-full blur-3xl" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-[#ff3d2e]/3 rounded-full blur-3xl" />
       
       <div className="max-w-7xl mx-auto px-4 relative z-10">
         <motion.div
@@ -27,8 +27,8 @@ const WhyUniversalSection = () => {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 1 }}
         >
-          <p className="text-[#FFD700] tracking-[0.3em] text-sm mb-4">WHY CHOOSE US</p>
-          <h2 className="text-4xl md:text-6xl lg:text-7xl font-black" style={{ fontFamily: 'Oswald, sans-serif' }}>
+          <p className="text-[#ff3d2e] tracking-[0.3em] text-sm mb-4">WHY CHOOSE US</p>
+          <h2 className="text-4xl md:text-6xl lg:text-7xl font-black font-display" >
             WHY <span className="gradient-text">UNIVERSAL FITNESS</span>
           </h2>
         </motion.div>
@@ -38,7 +38,7 @@ const WhyUniversalSection = () => {
           {reasons.map((reason, index) => (
             <motion.div
               key={reason.title}
-              className="flex-shrink-0 w-[280px] md:w-auto snap-start glassmorphism rounded-2xl p-8 border border-white/10 hover:border-[#FFD700]/30 transition-all duration-500 group"
+              className="flex-shrink-0 w-[280px] md:w-auto snap-start glassmorphism rounded-2xl p-8 border border-white/10 hover:border-[#ff3d2e]/30 transition-all duration-500 group"
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: index * 0.15 }}
@@ -50,11 +50,11 @@ const WhyUniversalSection = () => {
               >
                 {reason.icon}
               </motion.span>
-              <h3 className="text-lg font-bold text-white group-hover:text-[#FFD700] transition-colors duration-300 mb-2" style={{ fontFamily: 'Oswald, sans-serif' }}>
+              <h3 className="text-lg font-bold text-white group-hover:text-[#ff3d2e] transition-colors duration-300 mb-2 font-display" >
                 {reason.title}
               </h3>
               <p className="text-gray-400 text-sm">{reason.desc}</p>
-              <div className="mt-4 w-8 h-0.5 bg-[#FFD700]/30 group-hover:w-full group-hover:bg-[#FFD700] transition-all duration-500" />
+              <div className="mt-4 w-8 h-0.5 bg-[#ff3d2e]/30 group-hover:w-full group-hover:bg-[#ff3d2e] transition-all duration-500" />
             </motion.div>
           ))}
         </div>

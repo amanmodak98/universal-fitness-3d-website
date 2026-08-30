@@ -63,8 +63,8 @@ const BookingModal = ({ onClose }: BookingModalProps) => {
             <>
               {/* Header */}
               <div className="mb-6">
-                <p className="text-[#FFD700] text-sm tracking-wider mb-2">TURF BOOKING</p>
-                <h3 className="text-2xl md:text-3xl font-black text-white" style={{ fontFamily: 'Oswald, sans-serif' }}>
+                <p className="text-[#ff3d2e] text-sm tracking-wider mb-2">TURF BOOKING</p>
+                <h3 className="text-2xl md:text-3xl font-black text-white font-display" >
                   BOOK YOUR SLOT
                 </h3>
                 <p className="text-gray-400 text-sm mt-2">
@@ -82,7 +82,7 @@ const BookingModal = ({ onClose }: BookingModalProps) => {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:border-[#FFD700]/50 focus:outline-none transition-colors"
+                    className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:border-[#ff3d2e]/50 focus:outline-none transition-colors"
                     placeholder="Your full name"
                   />
                 </div>
@@ -95,7 +95,7 @@ const BookingModal = ({ onClose }: BookingModalProps) => {
                     value={formData.mobile}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:border-[#FFD700]/50 focus:outline-none transition-colors"
+                    className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:border-[#ff3d2e]/50 focus:outline-none transition-colors"
                     placeholder="+91 XXXXX XXXXX"
                   />
                 </div>
@@ -109,7 +109,7 @@ const BookingModal = ({ onClose }: BookingModalProps) => {
                       value={formData.date}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white focus:border-[#FFD700]/50 focus:outline-none transition-colors"
+                      className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white focus:border-[#ff3d2e]/50 focus:outline-none transition-colors"
                     />
                   </div>
                   <div>
@@ -120,7 +120,7 @@ const BookingModal = ({ onClose }: BookingModalProps) => {
                       value={formData.time}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white focus:border-[#FFD700]/50 focus:outline-none transition-colors"
+                      className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white focus:border-[#ff3d2e]/50 focus:outline-none transition-colors"
                     />
                   </div>
                 </div>
@@ -132,7 +132,7 @@ const BookingModal = ({ onClose }: BookingModalProps) => {
                     value={formData.sport}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white focus:border-[#FFD700]/50 focus:outline-none transition-colors"
+                    className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white focus:border-[#ff3d2e]/50 focus:outline-none transition-colors"
                   >
                     <option value="" className="bg-gray-900">Select a sport</option>
                     <option value="cricket" className="bg-gray-900">Cricket</option>
@@ -150,21 +150,21 @@ const BookingModal = ({ onClose }: BookingModalProps) => {
                     value={formData.players}
                     onChange={handleChange}
                     min="1"
-                    className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:border-[#FFD700]/50 focus:outline-none transition-colors"
+                    className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:border-[#ff3d2e]/50 focus:outline-none transition-colors"
                     placeholder="Approx. number of players"
                   />
                 </div>
 
                 {/* Pricing info */}
-                <div className="glassmorphism rounded-xl p-4 border border-[#FFD700]/10">
+                <div className="glassmorphism rounded-xl p-4 border border-[#ff3d2e]/10">
                   <p className="text-sm text-gray-400">
-                    <span className="text-[#FFD700] font-medium">Pricing:</span> Mon–Fri: ₹800/hr | Sat–Sun: ₹1000/hr
+                    <span className="text-[#ff3d2e] font-medium">Pricing:</span> Mon–Fri: ₹800/hr | Sat–Sun: ₹1000/hr
                   </p>
                 </div>
 
                 <motion.button
                   type="submit"
-                  className="w-full py-4 bg-gradient-to-r from-[#FFD700] to-[#FFA500] text-black font-bold rounded-full text-lg hover:shadow-xl hover:shadow-[#FFD700]/20 transition-all duration-300"
+                  className="w-full py-4 bg-gradient-to-r from-[#ff3d2e] to-[#e62414] text-black font-bold rounded-full text-lg hover:shadow-xl hover:shadow-[#ff3d2e]/20 transition-all duration-300"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                 >
@@ -184,14 +184,14 @@ const BookingModal = ({ onClose }: BookingModalProps) => {
               animate={{ opacity: 1, scale: 1 }}
             >
               <motion.div
-                className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-[#FFD700] to-[#FFA500] rounded-full flex items-center justify-center"
+                className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-[#ff3d2e] to-[#e62414] rounded-full flex items-center justify-center"
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}
                 transition={{ type: 'spring', delay: 0.2 }}
               >
                 <span className="text-4xl">✓</span>
               </motion.div>
-              <h3 className="text-2xl font-bold text-white mb-3" style={{ fontFamily: 'Oswald, sans-serif' }}>
+              <h3 className="text-2xl font-bold text-white mb-3 font-display" >
                 BOOKING REQUEST RECEIVED
               </h3>
               <p className="text-gray-300 mb-6">
@@ -199,7 +199,7 @@ const BookingModal = ({ onClose }: BookingModalProps) => {
               </p>
               <motion.button
                 onClick={onClose}
-                className="px-8 py-3 bg-gradient-to-r from-[#FFD700] to-[#FFA500] text-black font-bold rounded-full"
+                className="px-8 py-3 bg-gradient-to-r from-[#ff3d2e] to-[#e62414] text-black font-bold rounded-full"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >

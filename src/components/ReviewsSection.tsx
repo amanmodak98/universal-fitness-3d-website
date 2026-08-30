@@ -25,7 +25,7 @@ const StarRating = ({ rating }: { rating: number }) => {
       {Array.from({ length: 5 }).map((_, i) => (
         <motion.span
           key={i}
-          className="text-[#FFD700] text-lg"
+          className="text-[#ff3d2e] text-lg"
           initial={{ opacity: 0, scale: 0 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
@@ -45,7 +45,7 @@ const ReviewsSection = () => {
   return (
     <section id="reviews" ref={sectionRef} className="py-20 md:py-32 px-4 relative overflow-hidden">
       {/* Background */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[#FFD700]/5 rounded-full blur-3xl" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[#ff3d2e]/5 rounded-full blur-3xl" />
 
       <div className="max-w-7xl mx-auto relative z-10">
         <motion.div
@@ -54,8 +54,8 @@ const ReviewsSection = () => {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 1 }}
         >
-          <p className="text-[#FFD700] tracking-[0.3em] text-sm mb-4">TESTIMONIALS</p>
-          <h2 className="text-4xl md:text-6xl lg:text-7xl font-black" style={{ fontFamily: 'Oswald, sans-serif' }}>
+          <p className="text-[#ff3d2e] tracking-[0.3em] text-sm mb-4">TESTIMONIALS</p>
+          <h2 className="text-4xl md:text-6xl lg:text-7xl font-black font-display" >
             WHAT OUR <span className="gradient-text">MEMBERS SAY</span>
           </h2>
           
@@ -66,11 +66,11 @@ const ReviewsSection = () => {
             animate={isInView ? { opacity: 1, scale: 1 } : {}}
             transition={{ delay: 0.5 }}
           >
-            <span className="text-4xl md:text-5xl font-black gradient-text" style={{ fontFamily: 'Oswald, sans-serif' }}>4.9</span>
+            <span className="text-4xl md:text-5xl font-black gradient-text font-display" >4.9</span>
             <div className="text-left">
               <div className="flex space-x-0.5">
                 {[1, 2, 3, 4, 5].map((i) => (
-                  <span key={i} className="text-[#FFD700]">★</span>
+                  <span key={i} className="text-[#ff3d2e]">★</span>
                 ))}
               </div>
               <p className="text-gray-400 text-sm">Based on 67 reviews</p>
@@ -83,7 +83,7 @@ const ReviewsSection = () => {
           {reviews.map((review, index) => (
             <motion.div
               key={index}
-              className="glassmorphism rounded-2xl p-6 md:p-8 border border-white/10 hover:border-[#FFD700]/20 transition-all duration-500"
+              className="glassmorphism rounded-2xl p-6 md:p-8 border border-white/10 hover:border-[#ff3d2e]/20 transition-all duration-500"
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.3 + index * 0.2 }}
@@ -94,7 +94,7 @@ const ReviewsSection = () => {
                 "{review.text}"
               </p>
               <div className="mt-6 flex items-center space-x-3">
-                <div className="w-10 h-10 bg-gradient-to-br from-[#FFD700] to-[#FFA500] rounded-full flex items-center justify-center">
+                <div className="w-10 h-10 bg-gradient-to-br from-[#ff3d2e] to-[#e62414] rounded-full flex items-center justify-center">
                   <span className="text-black font-bold text-sm">UF</span>
                 </div>
                 <div>

@@ -3,7 +3,7 @@ import { useFrame } from '@react-three/fiber'
 import * as THREE from 'three'
 
 // Dumbbell component
-const Dumbbell = ({ position, rotation = [0, 0, 0], scale = 1, color = '#FFD700' }: any) => {
+const Dumbbell = ({ position, rotation = [0, 0, 0], scale = 1, color = '#ff3d2e' }: any) => {
   const ref = useRef<THREE.Group>(null!)
   useFrame((state) => {
     if (ref.current) {
@@ -46,7 +46,7 @@ const WeightPlate = ({ position, scale = 1 }: any) => {
   return (
     <mesh ref={ref} position={position} scale={scale}>
       <torusGeometry args={[0.3, 0.08, 16, 32]} />
-      <meshStandardMaterial color="#FFD700" metalness={0.9} roughness={0.1} />
+      <meshStandardMaterial color="#ff3d2e" metalness={0.9} roughness={0.1} />
     </mesh>
   )
 }
@@ -97,11 +97,11 @@ const BarbellRack = ({ position }: any) => {
       {/* Weights on barbell */}
       <mesh position={[-0.55, -0.3, 0]} rotation={[Math.PI / 2, 0, 0]}>
         <cylinderGeometry args={[0.2, 0.2, 0.08, 16]} />
-        <meshStandardMaterial color="#FFD700" metalness={0.8} roughness={0.2} />
+        <meshStandardMaterial color="#ff3d2e" metalness={0.8} roughness={0.2} />
       </mesh>
       <mesh position={[0.55, -0.3, 0]} rotation={[Math.PI / 2, 0, 0]}>
         <cylinderGeometry args={[0.2, 0.2, 0.08, 16]} />
-        <meshStandardMaterial color="#FFD700" metalness={0.8} roughness={0.2} />
+        <meshStandardMaterial color="#ff3d2e" metalness={0.8} roughness={0.2} />
       </mesh>
     </group>
   )
@@ -213,7 +213,7 @@ const Particles = () => {
           args={[positions, 3]}
         />
       </bufferGeometry>
-      <pointsMaterial size={0.03} color="#FFD700" transparent opacity={0.6} sizeAttenuation />
+      <pointsMaterial size={0.03} color="#ff3d2e" transparent opacity={0.6} sizeAttenuation />
     </points>
   )
 }
@@ -267,10 +267,10 @@ export default function HeroScene() {
     <group ref={groupRef}>
       {/* Lighting */}
       <ambientLight intensity={0.3} />
-      <pointLight position={[5, 5, 5]} intensity={1} color="#FFD700" />
-      <pointLight position={[-5, 3, -5]} intensity={0.5} color="#FFA500" />
+      <pointLight position={[5, 5, 5]} intensity={1} color="#ff3d2e" />
+      <pointLight position={[-5, 3, -5]} intensity={0.5} color="#e62414" />
       <pointLight position={[0, 5, 0]} intensity={0.8} color="#ffffff" />
-      <spotLight position={[0, 8, 0]} intensity={1} angle={0.5} penumbra={1} color="#FFD700" />
+      <spotLight position={[0, 8, 0]} intensity={1} angle={0.5} penumbra={1} color="#ff3d2e" />
       
       {/* Environment */}
       <Floor />
@@ -299,7 +299,7 @@ export default function HeroScene() {
       {/* Sports balls */}
       <SportsBall position={[-1, 0.5, 2]} color="#fff" />
       <SportsBall position={[2, 1, 2]} color="#8B4513" />
-      <SportsBall position={[3.5, -0.5, 1]} color="#FFD700" />
+      <SportsBall position={[3.5, -0.5, 1]} color="#ff3d2e" />
       
       {/* Particles */}
       <Particles />

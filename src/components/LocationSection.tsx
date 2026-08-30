@@ -7,7 +7,7 @@ const LocationSection = () => {
 
   return (
     <section id="contact" ref={sectionRef} className="py-20 md:py-32 px-4 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#FFD700]/3 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#ff3d2e]/3 to-transparent" />
 
       <div className="max-w-7xl mx-auto relative z-10">
         <motion.div
@@ -16,8 +16,8 @@ const LocationSection = () => {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 1 }}
         >
-          <p className="text-[#FFD700] tracking-[0.3em] text-sm mb-4">VISIT US</p>
-          <h2 className="text-4xl md:text-6xl lg:text-7xl font-black" style={{ fontFamily: 'Oswald, sans-serif' }}>
+          <p className="text-[#ff3d2e] tracking-[0.3em] text-sm mb-4">VISIT US</p>
+          <h2 className="text-4xl md:text-6xl lg:text-7xl font-black font-display" >
             FIND YOUR <span className="gradient-text">ARENA</span>
           </h2>
         </motion.div>
@@ -30,13 +30,13 @@ const LocationSection = () => {
             transition={{ duration: 1, delay: 0.3 }}
           >
             <div className="glassmorphism rounded-2xl p-8 md:p-10 h-full border border-white/10">
-              <h3 className="text-2xl font-bold text-[#FFD700] mb-6" style={{ fontFamily: 'Oswald, sans-serif' }}>
+              <h3 className="text-2xl font-bold text-[#ff3d2e] mb-6 font-display" >
                 Universal Fitness & Sport Arena Turf
               </h3>
               
               <div className="space-y-4 mb-8">
                 <div className="flex items-start space-x-3">
-                  <span className="text-[#FFD700] mt-1">📍</span>
+                  <span className="text-[#ff3d2e] mt-1">📍</span>
                   <div>
                     <p className="text-white font-medium">Guru Gobind Singh Marg,</p>
                     <p className="text-gray-300">Nandvan Road,</p>
@@ -46,21 +46,21 @@ const LocationSection = () => {
                 </div>
                 
                 <div className="flex items-center space-x-3">
-                  <span className="text-[#FFD700]">📞</span>
-                  <a href="tel:+916269673000" className="text-white hover:text-[#FFD700] transition-colors">
+                  <span className="text-[#ff3d2e]">📞</span>
+                  <a href="tel:+916269673000" className="text-white hover:text-[#ff3d2e] transition-colors">
                     +91 62696 73000
                   </a>
                 </div>
                 
                 <div className="flex items-center space-x-3">
-                  <span className="text-[#FFD700]">✉️</span>
-                  <a href="mailto:universalfitness321@gmail.com" className="text-white hover:text-[#FFD700] transition-colors text-sm">
+                  <span className="text-[#ff3d2e]">✉️</span>
+                  <a href="mailto:universalfitness321@gmail.com" className="text-white hover:text-[#ff3d2e] transition-colors text-sm">
                     universalfitness321@gmail.com
                   </a>
                 </div>
 
                 <div className="flex items-center space-x-3">
-                  <span className="text-[#FFD700]">🕐</span>
+                  <span className="text-[#ff3d2e]">🕐</span>
                   <div>
                     <p className="text-white font-medium">OPEN 24 HOURS</p>
                     <p className="text-green-400 text-sm">Always open • 7 days a week</p>
@@ -74,7 +74,7 @@ const LocationSection = () => {
                   href="https://www.google.com/maps/dir//Guru+Gobind+Singh+Marg,+Nandvan+Road,+Jarway+Alias+Hirapur,+Raipur,+Chhattisgarh+492099"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-6 py-3 bg-gradient-to-r from-[#FFD700] to-[#FFA500] text-black font-bold rounded-full text-sm hover:shadow-lg hover:shadow-[#FFD700]/20 transition-all duration-300"
+                  className="px-6 py-3 bg-gradient-to-r from-[#ff3d2e] to-[#e62414] text-black font-bold rounded-full text-sm hover:shadow-lg hover:shadow-[#ff3d2e]/20 transition-all duration-300"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
@@ -82,7 +82,7 @@ const LocationSection = () => {
                 </motion.a>
                 <motion.a
                   href="tel:+916269673000"
-                  className="px-6 py-3 border border-white/20 text-white font-bold rounded-full text-sm hover:border-[#FFD700]/50 hover:text-[#FFD700] transition-all duration-300"
+                  className="px-6 py-3 border border-white/20 text-white font-bold rounded-full text-sm hover:border-[#ff3d2e]/50 hover:text-[#ff3d2e] transition-all duration-300"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
@@ -120,7 +120,7 @@ const LocationSection = () => {
               title="Universal Fitness Location"
             />
             {/* Overlay for map styling */}
-            <div className="absolute inset-0 pointer-events-none border border-[#FFD700]/10 rounded-2xl" />
+            <div className="absolute inset-0 pointer-events-none border border-[#ff3d2e]/10 rounded-2xl" />
           </motion.div>
         </div>
       </div>

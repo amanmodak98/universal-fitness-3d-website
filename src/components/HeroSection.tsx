@@ -33,7 +33,7 @@ const HeroSection = () => {
           transition={{ duration: 1, delay: 0.5 }}
         >
           <motion.p
-            className="text-[#FFD700] text-sm md:text-base tracking-[0.3em] mb-4 uppercase"
+            className="text-[#ff3d2e] text-sm md:text-base tracking-[0.3em] mb-4 uppercase"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.8 }}
@@ -44,7 +44,7 @@ const HeroSection = () => {
 
         <motion.h1
           className="text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-black leading-[0.9] mb-6"
-          style={{ fontFamily: 'Oswald, sans-serif' }}
+          
           initial={{ opacity: 0, y: 80 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.3 }}
@@ -70,7 +70,7 @@ const HeroSection = () => {
         >
           <motion.a
             href="#about"
-            className="px-8 py-4 bg-gradient-to-r from-[#FFD700] to-[#FFA500] text-black font-bold rounded-full text-lg hover:shadow-xl hover:shadow-[#FFD700]/30 transition-all duration-300"
+            className="px-8 py-4 bg-gradient-to-r from-[#ff3d2e] to-[#e62414] text-black font-bold rounded-full text-lg hover:shadow-xl hover:shadow-[#ff3d2e]/30 transition-all duration-300"
             whileHover={{ scale: 1.05, y: -3 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -78,7 +78,7 @@ const HeroSection = () => {
           </motion.a>
           <motion.button
             onClick={openBooking}
-            className="px-8 py-4 border-2 border-[#FFD700] text-[#FFD700] font-bold rounded-full text-lg hover:bg-[#FFD700] hover:text-black transition-all duration-300"
+            className="px-8 py-4 border-2 border-[#ff3d2e] text-[#ff3d2e] font-bold rounded-full text-lg hover:bg-[#ff3d2e] hover:text-black transition-all duration-300"
             whileHover={{ scale: 1.05, y: -3 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -99,7 +99,7 @@ const HeroSection = () => {
             transition={{ duration: 2, repeat: Infinity }}
           >
             <motion.div
-              className="w-1 h-2 bg-[#FFD700] rounded-full"
+              className="w-1 h-2 bg-[#ff3d2e] rounded-full"
               animate={{ y: [0, 8, 0] }}
               transition={{ duration: 2, repeat: Infinity }}
             />
